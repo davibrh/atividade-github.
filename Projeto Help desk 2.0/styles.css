@@ -1,0 +1,354 @@
+/* ========================================================= */
+/* CONFIGURAÇÃO GERAL DA PÁGINA */
+/* ========================================================= */
+
+/* Aplica configurações para todos os elementos da página */
+*{
+
+    margin: 0;
+    /* Remove as margens padrão dos elementos */
+
+    padding: 0;
+    /* Remove os espaçamentos internos padrão */
+
+    box-sizing: border-box;
+    /* Faz com que padding e borda façam parte da largura e altura */
+
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define a fonte padrão do site */
+
+}
+
+/* ========================================================= */
+/* CONFIGURAÇÃO DO CORPO DA PÁGINA */
+/* ========================================================= */
+
+body{
+
+    display: flex;
+    /* Ativa o Flexbox */
+
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+
+    height: 100vh;
+    /* Faz o body ocupar toda a altura da tela */
+
+    background-image: url("fundo.jpg");
+    /* Define a imagem de fundo */
+
+    background-size: cover;
+    /* Faz a imagem ocupar toda a tela */
+
+    background-position: center;
+    /* Centraliza a imagem */
+
+    background-repeat: no-repeat;
+    /* Impede que a imagem seja repetida */
+
+    position: relative;
+    /* Permite posicionar elementos filhos de forma absoluta */
+
+}
+
+/* ========================================================= */
+/* CAMADA ESCURA SOBRE A IMAGEM DE FUNDO */
+/* ========================================================= */
+
+body::before{
+
+    content: "";
+    /* Cria um elemento vazio */
+
+    position: absolute;
+    /* Posiciona a camada sobre o body */
+
+    width: 100%;
+    /* Ocupa toda a largura */
+
+    height: 100%;
+    /* Ocupa toda a altura */
+
+    background: rgba(0,0,0,.65);
+    /* Cria uma camada preta com transparência */
+
+    z-index: 0;
+    /* Coloca a camada atrás do formulário */
+
+}
+
+/* ========================================================= */
+/* CAIXA PRINCIPAL DO LOGIN/CADASTRO */
+/* ========================================================= */
+
+.login-box{
+
+    position: relative;
+    /* Mantém a caixa acima da camada escura */
+
+    z-index: 1;
+    /* Coloca a caixa na frente do fundo */
+
+    width: 380px;
+    /* Define a largura da caixa */
+
+    padding: 35px;
+    /* Espaçamento interno */
+
+    background: rgba(255,255,255,.94);
+    /* Fundo branco com leve transparência */
+
+    border-radius: 12px;
+    /* Arredonda os cantos */
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.5);
+    /* Adiciona sombra ao redor da caixa */
+
+}
+
+/* ========================================================= */
+/* TÍTULO DO SISTEMA */
+/* ========================================================= */
+
+.login-box h1{
+
+    text-align: center;
+    /* Centraliza o título */
+
+    color: #ad3636;
+    /* Cor vermelha */
+
+    font-size: 40px;
+    /* Tamanho da fonte */
+
+    margin-bottom: 30px;
+    /* Espaço abaixo do título */
+
+}
+
+/* ========================================================= */
+/* CONFIGURAÇÃO DOS RÓTULOS (LABELS) */
+/* ========================================================= */
+
+label{
+
+    display: block;
+    /* Faz cada label ocupar uma linha inteira */
+
+    margin-top: 15px;
+    /* Espaço acima do label */
+
+    margin-bottom: 5px;
+    /* Espaço entre o label e o campo */
+
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+
+}
+
+/* ========================================================= */
+/* CAMPOS DE ENTRADA */
+/* ========================================================= */
+
+input{
+
+    width: 100%;
+    /* Faz o campo ocupar toda a largura da caixa */
+
+    padding: 11px;
+    /* Espaçamento interno */
+
+    border: 1px solid #ccc;
+    /* Define uma borda cinza */
+
+    border-radius: 6px;
+    /* Arredonda os cantos */
+
+    transition: .3s;
+    /* Cria uma animação suave nas alterações */
+
+}
+
+/* ========================================================= */
+/* EFEITO AO CLICAR NO CAMPO */
+/* ========================================================= */
+
+input:focus{
+
+    outline: none;
+    /* Remove a borda azul padrão do navegador */
+
+    border-color: #ad3636;
+    /* Altera a cor da borda */
+
+    box-shadow: 0 0 8px rgba(173,54,54,.4);
+    /* Adiciona um brilho ao redor do campo */
+
+}
+
+/* ========================================================= */
+/* BOTÃO */
+/* ========================================================= */
+
+button{
+
+    width: 100%;
+    /* Faz o botão ocupar toda a largura */
+
+    margin-top: 25px;
+    /* Espaço acima do botão */
+
+    padding: 12px;
+    /* Espaçamento interno */
+
+    border: none;
+    /* Remove a borda */
+
+    border-radius: 6px;
+    /* Arredonda os cantos */
+
+    background: #ad3636;
+    /* Cor de fundo vermelha */
+
+    color: white;
+    /* Cor do texto */
+
+    font-size: 16px;
+    /* Tamanho da fonte */
+
+    font-weight: bold;
+    /* Texto em negrito */
+
+    cursor: pointer;
+    /* Altera o cursor para uma mãozinha */
+
+    transition: .3s;
+    /* Cria uma animação suave */
+
+}
+
+/* ========================================================= */
+/* EFEITO AO PASSAR O MOUSE NO BOTÃO */
+/* ========================================================= */
+
+button:hover{
+
+    background: #7d2424;
+    /* Escurece o botão */
+
+    transform: translateY(-2px);
+    /* Move o botão levemente para cima */
+
+}
+
+/* ========================================================= */
+/* TEXTO DOS LINKS */
+/* ========================================================= */
+
+.link{
+
+    margin-top: 20px;
+    /* Espaço acima do texto */
+
+    text-align: center;
+    /* Centraliza o texto */
+
+    font-size: 15px;
+    /* Tamanho da fonte */
+
+    color: #555;
+    /* Cor cinza */
+
+}
+
+/* ========================================================= */
+/* LINK "CADASTRE-SE" E "FAZER LOGIN" */
+/* ========================================================= */
+
+.link a{
+
+    color: #ad3636;
+    /* Cor vermelha */
+
+    text-decoration: none;
+    /* Remove o sublinhado */
+
+    font-weight: bold;
+    /* Texto em negrito */
+
+}
+
+/* ========================================================= */
+/* EFEITO AO PASSAR O MOUSE NO LINK */
+/* ========================================================= */
+
+.link a:hover{
+
+    text-decoration: underline;
+    /* Adiciona sublinhado ao passar o mouse */
+
+}
+
+/* ========================================================= */
+/* MENSAGEM DE BOAS-VINDAS */
+/* ========================================================= */
+
+h2{
+
+    text-align:center;
+    color:#444;
+    margin-bottom:15px;
+
+}
+
+.mensagem{
+
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+    font-size:15px;
+
+}
+
+/* ========================================================= */
+/* BOTÕES DA TELA INICIAL */
+/* ========================================================= */
+
+.botao{
+
+    display:block;
+
+    width:100%;
+
+    text-align:center;
+
+    padding:12px;
+
+    margin-top:15px;
+
+    background:#ad3636;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:6px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.botao:hover{
+
+    background:#7d2424;
+
+    transform:translateY(-2px);
+
+}

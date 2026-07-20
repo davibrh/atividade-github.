@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Define que o documento utiliza HTML5 -->
+
+<html lang="pt-BR">
+<!-- Início do documento HTML e define o idioma como Português do Brasil -->
+
+<head>
+    <!-- Configurações da página -->
+
+    <meta charset="UTF-8">
+    <!-- Permite o uso de caracteres especiais (acentuação) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se adaptar a celulares, tablets e computadores -->
+
+    <title>Login - BELOGUIANOS</title>
+    <!-- Título exibido na aba do navegador -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa o arquivo de estilos CSS -->
+
+    <link rel="icon" href="favicon.ico">
+    <!-- Define o ícone exibido na aba do navegador -->
+</head>
+
+<body>
+    <!-- Conteúdo visível da página -->
+
+    <!-- Caixa principal da tela de login -->
+    <div class="login-box">
+
+        <!-- Título do sistema -->
+        <h1>BELOGUIANOS</h1>
+
+        <!-- Formulário de login -->
+        <form action="login.php" method="POST">
+        <!--
+            action="login.php" -> Envia os dados para o arquivo PHP responsável pelo login.
+            method="POST" -> Envia os dados de forma segura, sem aparecer na URL.
+        -->
+
+            <!-- Campo Usuário -->
+            <label for="usuario">Usuário</label>
+
+            <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                placeholder="Digite seu usuário"
+                required>
+            <!--
+                type="text" -> Campo para digitação de texto.
+                id="usuario" -> Identificador utilizado pelo label.
+                name="usuario" -> Nome enviado ao arquivo login.php.
+                placeholder -> Texto exibido antes da digitação.
+                required -> Campo obrigatório.
+            -->
+
+            <!-- Campo Senha -->
+            <label for="senha">Senha</label>
+
+            <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Digite sua senha"
+                required>
+            <!--
+                type="password" -> Oculta os caracteres digitados.
+                id="senha" -> Identificador utilizado pelo label.
+                name="senha" -> Nome enviado ao arquivo login.php.
+                placeholder -> Texto de exemplo dentro do campo.
+                required -> Campo obrigatório.
+            -->
+
+            <!-- Botão para realizar o login -->
+            <button type="submit">
+                Entrar
+            </button>
+            <!--
+                type="submit" -> Envia todos os dados do formulário
+                para o arquivo login.php.
+            -->
+
+        </form>
+
+        <!-- Link para acessar a tela de cadastro -->
+        <p class="link">
+            Não possui uma conta?
+
+            <a href="cadastro.html">
+                Cadastre-se
+            </a>
+            <!--
+                Ao clicar, o usuário é direcionado para a página
+                de cadastro (cadastro.html).
+            -->
+        </p>
+
+    </div>
+
+</body>
+
+</html>

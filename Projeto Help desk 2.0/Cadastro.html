@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!-- Define que o documento utiliza HTML5 -->
+
+<html lang="pt-BR">
+<!-- Início do documento HTML e define o idioma como Português do Brasil -->
+
+<head>
+    <!-- Configurações da página -->
+
+    <meta charset="UTF-8">
+    <!-- Permite o uso de caracteres especiais (acentuação) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se adaptar a celulares, tablets e computadores -->
+
+    <title>Cadastro - BELOGUIANOS</title>
+    <!-- Título exibido na aba do navegador -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importa o arquivo de estilos CSS -->
+
+    <link rel="icon" href="favicon.ico">
+    <!-- Define o ícone exibido na aba do navegador -->
+</head>
+
+<body>
+    <!-- Conteúdo visível da página -->
+
+    <!-- Caixa principal do formulário de cadastro -->
+    <div class="login-box">
+
+        <!-- Título do sistema -->
+        <h1>BELOGUIANOS</h1>
+
+        <!-- Formulário de cadastro -->
+        <form action="cadastro.php" method="POST">
+        <!--
+            action="cadastro.php" -> Envia os dados para o arquivo PHP.
+            method="POST" -> Envia os dados de forma segura, sem aparecer na URL.
+        -->
+
+            <!-- Campo Nome -->
+            <label for="nome">Nome</label>
+
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required>
+            <!--
+                type="text" -> Campo de texto.
+                id="nome" -> Identificador do campo.
+                name="nome" -> Nome enviado para o PHP.
+                placeholder -> Texto de exemplo.
+                required -> Campo obrigatório.
+            -->
+
+            <!-- Campo Usuário -->
+            <label for="usuario">Usuário</label>
+
+            <input
+                type="text"
+                id="usuario"
+                name="usuario"
+                placeholder="Escolha um usuário"
+                required>
+
+            <!-- Campo E-mail -->
+            <label for="email">E-mail</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required>
+            <!--
+                type="email" verifica se o e-mail está em um formato válido.
+            -->
+
+            <!-- Campo Senha -->
+            <label for="senha">Senha</label>
+
+            <input
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Crie uma senha"
+                required>
+            <!--
+                type="password" oculta os caracteres digitados.
+            -->
+
+            <!-- Campo Confirmar Senha -->
+            <label for="confirmar">Confirmar senha</label>
+
+            <input
+                type="password"
+                id="confirmar"
+                name="confirmar"
+                placeholder="Repita a senha"
+                required>
+            <!--
+                Campo utilizado para confirmar se o usuário digitou a mesma senha.
+            -->
+
+            <!-- Botão de cadastro -->
+            <button type="submit">
+                Cadastrar
+            </button>
+            <!--
+                type="submit" envia todos os dados do formulário
+                para o arquivo cadastro.php.
+            -->
+
+        </form>
+
+        <!-- Link para voltar para a tela de login -->
+        <p class="link">
+            Já possui uma conta?
+
+            <a href="index.html">
+                Fazer Login
+            </a>
+            <!--
+                Ao clicar, o usuário é direcionado para a página de login.
+            -->
+        </p>
+
+    </div>
+
+</body>
+
+</html>
